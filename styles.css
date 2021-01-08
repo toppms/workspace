@@ -1,0 +1,51 @@
+.father {
+    /*flex direction default = row*/
+    /*flex direction이 raw일 경우,
+    main axis = 수평 축에 움직임*/
+
+    /*flex direction이 column일 경우
+    main axis = 수직 축에서 움직임*/
+    
+
+    /*flex direction이 raw일 경우
+    cross axis = 수직 축에서 움직임*/
+
+    
+    /*flex direction이 column일 경우
+    cross axis = 수평 축에서 움직임*/
+    
+    /*align-self: child item 각각의 위치 변경;*/
+
+    /*order: item의 순서 변경*/
+    display: flex; 
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100vh;
+    align-content: space-between;
+
+    /*flex-wrap: nowrap, wrap*/
+
+    flex-wrap : nowrap; 
+}
+
+.child {
+    flex-basis: 30%;
+    background-color: goldenrod;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.child:nth-child(2) {
+    background-color: yellow;
+    /*flex-shrink: default값:1
+    공간이 줄어들수록 더 작아짐*/
+    
+    /*flex-grow: default값:0
+    주변 여분 공간이 있으면 여분 공간을 차지*/
+    flex-grow: 1;
+}
