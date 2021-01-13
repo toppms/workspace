@@ -1,0 +1,66 @@
+/*.father {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 100px 50px 300px;
+    column-gap: 10px;
+    row-gap: 10px;
+    gap:10px;
+}*/
+.grid {
+    display: grid;
+    gap: 10px;
+    height: 50vh;
+    /* px 사용x % or fr => 비율*/
+    /* grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr); */
+
+    grid-template: 
+    /* row명 작성, row의 height 설정 /
+    column의 width 설정 []를 통해 네이밍 설정 가능(생략 가능)*/
+    [header-start]"header header header header" 1fr [header-end]
+    [content-start]"content content content nav" 2fr [content-end]
+    [footer-start]"footer footer footer footer" 1fr [footer-end]
+    /1fr 1fr 1fr 1fr;
+
+    /* grid-template-areas: 
+    /* "header header header header"
+    "content content content nav" 
+    "content content content nav"
+    "footer footer footer footer" */ 
+}
+.header {
+    background-color: cyan;
+    grid-area: header;
+    /* 라인1번에서 2번으로 끝내기 */
+    /* grid-column-start: 1; 
+    grid-column-end: 5; */
+    /* grid-column:1 / -1; */
+    /* grid-column: span 4; */
+}
+.content {
+    background-color: coral;
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+    /* grid-column: 1 / -2;
+    grid-row:span 2;     */
+    grid-area: content;
+}
+.nav {
+    background-color: chartreuse;
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    /* grid-row: span 2 ; */
+    grid-area: nav;
+}
+.footer {
+    background-color: goldenrod;
+    grid-area: footer;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* grid-column: 1 / -1; */
+    /* grid-column: span 4; */
+    /* -1은 끝이라는 의미 */
+    /* -는 끝에서부터 올라옴 */
+}

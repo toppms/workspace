@@ -1,0 +1,32 @@
+.grid {
+    background: black;
+    color: white;
+    display: grid;
+    gap: 10px;
+    height: 250vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4,100px);
+
+    /* justify-content = grid column열(수평) 조정
+       align=content = grid row열(수직) 조정
+       place-content: row column;
+     
+       justify-items = default:stretch (수평)
+       align-item = default:stretch (수직)
+       place-items: row column;
+    */
+    justify-content: center;
+    align-content:space-between;
+}
+.header {
+    background-color: cyan;
+}
+.content {
+    background-color: coral;
+}
+.nav {
+    background-color: chartreuse;
+}
+.footer {
+    background-color: goldenrod;
+}
